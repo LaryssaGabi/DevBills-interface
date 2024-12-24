@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { zodResolver } from '@hookform/resolvers/zod';
 import { X } from '@phosphor-icons/react';
 import { InputMask } from '@react-input/mask';
