@@ -16,7 +16,7 @@ import { Input } from '../../components/input';
 import { Logo } from '../../components/logo';
 import { Title } from '../../components/title';
 import { Transaction } from '../../components/transaction';
-import { EditTransactionForm } from '../../components/edit-transaction-dialog';
+// import { EditTransactionForm } from '../../components/edit-transaction-dialog';
 import { useFetchAPI } from '../../hooks/useFetchAPI';
 import { transactionsFilterSchema } from '../../validators/schemas';
 import { FinancialEvolutionFilterData, TransactionsFilterData } from '../../validators/types';
@@ -200,7 +200,7 @@ export function Home() {
                                         variant={item.type}
                                     />
                                     <div style={{ display: 'flex', gap: '8px' }}>
-                                        <EditTransactionForm />
+                                        {/* <EditTransactionForm /> */}
                                         <DeleteTransactionForm
                                             item={item}
                                             onDelete={handleDeleteTransaction}
