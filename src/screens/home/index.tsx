@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { zodResolver } from '@hookform/resolvers/zod';
 import { X } from '@phosphor-icons/react';
 import { InputMask } from '@react-input/mask';
@@ -15,7 +16,7 @@ import { Input } from '../../components/input';
 import { Logo } from '../../components/logo';
 import { Title } from '../../components/title';
 import { Transaction } from '../../components/transaction';
-// import { EditTransactionForm } from '../../components/edit-transaction-dialog';
+import { EditTransactionForm } from '../../components/edit-transaction-dialog';
 import { useFetchAPI } from '../../hooks/useFetchAPI';
 import { transactionsFilterSchema } from '../../validators/schemas';
 import { FinancialEvolutionFilterData, TransactionsFilterData } from '../../validators/types';
@@ -79,7 +80,7 @@ export function Home() {
         await fetchFinancialEvolution(data);
     }, [fetchFinancialEvolution]);
 
-
+   
     const handleDeleteTransaction = useCallback(async (id: string) => {
         await toast.promise(
             APIService.deleteTransaction(id),
@@ -201,7 +202,7 @@ export function Home() {
                                         variant={item.type}
                                     />
                                     <div style={{ display: 'flex', gap: '8px' }}>
-                                        {/* <EditTransactionForm /> */}
+                                        <EditTransactionForm transaction={item}/>
                                         <DeleteTransactionForm
                                             item={item}
                                             onDelete={handleDeleteTransaction}
