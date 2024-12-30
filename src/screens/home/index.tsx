@@ -23,7 +23,7 @@ import { Aside, Balance, CategoryBadge, ChartAction, ChartContainer, ChartConten
 import { DeleteTransactionForm } from '../../components/delete-transaction-dialog';
 import { APIService } from '../../services/api';
 import { toast } from 'react-toastify';
-import { Settings } from '../../components/settings';
+// import { Settings } from '../../components/settings';
 
 export function Home() {
     const transactionsFilterForm = useForm<TransactionsFilterData>({
@@ -102,7 +102,7 @@ export function Home() {
                 <div>
                     <CreateTransactionDialog />
                     <CreateCategoryDialog />
-                    <Settings/>
+                    {/* <Settings/> */}
                 </div>
             </Header>
             <Main>
