@@ -15,7 +15,7 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default tseslint.config({
-  languageOptions: {..
+  languageOptions: {...
     // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
