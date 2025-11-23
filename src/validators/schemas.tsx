@@ -52,5 +52,5 @@ export const financialEvolutionFilterSchema = z.object({
 });
 
 export const deleteTransactionSchema = z.object({
-    id: z.string().min(24, "ID deve ter 24 caracteres").max(24, "ID deve ter 24 caracteres"),
-  });  
+    id: z.string().min(1, "ID inválido"),
+});
